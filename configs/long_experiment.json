@@ -1,0 +1,106 @@
+{
+  "name": "test",
+  "interface": "wlp3s0",
+  "events": {
+    "1": {
+      "duration": 20000,
+      "rules": [
+        "rate 10mbit"
+      ]
+    },
+    "2": {
+      "duration": 5000,
+      "rules": [
+        "rate 10mbit",
+        "loss 2%"
+      ]
+    },
+    "3": {
+      "duration": 15000,
+      "rules": [
+        "rate 10mbit"
+      ]
+    },
+    "4": {
+      "duration": 5000,
+      "rules": [
+        "rate 10mbit",
+        "delay 20ms"
+      ]
+    },
+    "5": {
+      "duration": 15000,
+      "rules": [
+        "rate 10mbit"
+      ]
+    },
+    "6": {
+      "duration": 5000,
+      "rules": [
+        "rate 10mbit",
+        "loss 1%",
+        "delay 20ms"
+      ]
+    },
+    "7": {
+      "duration": 20000,
+      "rules": [
+        "rate 10mbit"
+      ]
+    },
+    "8": {
+      "duration": 5000,
+      "rules": [
+        "rate 10mbit"
+      ]
+    },
+    "9": {
+      "duration": 3000,
+      "rules": [
+        "rate 10mbit",
+        "delay 10ms 1ms distribution normal"
+      ]
+    },
+    "10": {
+      "duration": 3000,
+      "rules": [
+        "rate 10mbit",
+        "delay 15ms 1ms distribution normal"
+      ]
+    },
+    "11": {
+      "duration": 6000,
+      "rules": [
+        "rate 10mbit",
+        "delay 20ms 2ms distribution normal",
+        "loss 1%"
+      ]
+    },
+    "12": {
+      "duration": 3000,
+      "rules": [
+        "rate 10mbit",
+        "delay 15ms 1ms distribution normal"
+      ]
+    },
+    "13": {
+      "duration": 3000,
+      "rules": [
+        "rate 10mbit",
+        "delay 10ms 1ms distribution normal"
+      ]
+    },
+    "14": {
+      "duration": 10000,
+      "rules": [
+        "rate 10mbit"
+      ]
+    },
+    "15": {
+      "duration": 1000,
+      "rules": [
+        "clear"
+      ]
+    }
+  }
+}

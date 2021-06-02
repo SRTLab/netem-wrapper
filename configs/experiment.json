@@ -1,0 +1,60 @@
+{
+  "name": "test",
+  "interface": "wlp3s0",
+  "events": {
+    "1": {
+      "duration": 20000,
+      "rules": [
+        "rate 10mbit"
+      ]
+    },
+    "2": {
+      "duration": 3000,
+      "rules": [
+        "rate 10mbit",
+        "delay 10ms 1ms distribution normal"
+      ]
+    },
+    "3": {
+      "duration": 3000,
+      "rules": [
+        "rate 10mbit",
+        "delay 15ms 1ms distribution normal"
+      ]
+    },
+    "4": {
+      "duration": 6000,
+      "rules": [
+        "rate 10mbit",
+        "delay 20ms 2ms distribution normal",
+        "loss 1%"
+      ]
+    },
+    "5": {
+      "duration": 3000,
+      "rules": [
+        "rate 10mbit",
+        "delay 15ms 1ms distribution normal"
+      ]
+    },
+    "6": {
+      "duration": 3000,
+      "rules": [
+        "rate 10mbit",
+        "delay 10ms 1ms distribution normal"
+      ]
+    },
+    "7": {
+      "duration": 85000,
+      "rules": [
+        "rate 10mbit"
+      ]
+    },
+    "8": {
+      "duration": 1000,
+      "rules": [
+      "clear"
+      ]
+    }
+  }
+}
