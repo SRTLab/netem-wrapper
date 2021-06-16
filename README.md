@@ -90,7 +90,7 @@ standard deviation (jitter) of 10ms. It also adds a 0.1% packet loss with
 a correlation of 0.25%. This correlation is used to simulate burst errors. This
 event has a duration of 15 seconds.
 3. This event is 10 second long and adds a constant 50ms delay.
-4. The simulation is finished by 5 seconds of cleared conditions,
+4. The simulation is finished by 5 seconds of cleared conditions.
 
 
 
