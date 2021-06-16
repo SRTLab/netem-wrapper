@@ -3,7 +3,19 @@
 This is a simple wrapper to concatenate network conditions using `tc-netem `
 by means of a simple configuration file.
 
+### Usage
+
+``` python
+python emulate.py --config configs/example.json --output output.json
+```
+
+Where:
+
+* `config`: this is the path to the configuration file that must have been properly built in order to avoid errors.
+* `output`: this is an optional parameter that when present, creates a `json` file with the information about the timestamp and conditions applied.
+
 ### Configuration Files
+
 The configuration files have the following structure:
 
 ```
