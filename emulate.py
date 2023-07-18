@@ -3,7 +3,7 @@ import time
 import argparse
 import os
 from datetime import datetime
-
+import math
 
 def load_config(path: str) -> dict:
     with open(path) as json_file:
@@ -50,6 +50,11 @@ def apply_condition(interface: str, event: dict, is_cleared: bool):
 
     return cleared
 
+def get_repeat(config: dict):
+    repeats = config.get('repeat', 1)
+    if repeats == 'forever':
+        return math.inf
+    return repeats
 
 if __name__ == '__main__':
 
@@ -68,14 +73,22 @@ if __name__ == '__main__':
 
     print('Configuration file read:')
     print(config, '\n')
-    timeline = execute_experiment(config)
 
-    if args.output:
-        print(f'Creating output file {args.output}')
-        with open(args.output, 'w') as outfile:
-            json.dump(timeline, outfile)
-    else:
-        print('No output file.')
+    repeat = get_repeat(config)
+    i = 0
+    while repeat - i > 0:
+        print(f'Executing experiment {i + 1} of {repeat}')
+        timeline = execute_experiment(config)
+
+        if args.output:
+            output_file_name = f'{args.output}.json' if i == 0 else f'{args.output}_{i}.json'
+            print(f'Creating output file {output_file_name}')
+            with open(output_file_name, 'w') as outfile:
+                json.dump(timeline, outfile)
+        else:
+            print('No output file.')
+
+        i += 1
 
 
 
